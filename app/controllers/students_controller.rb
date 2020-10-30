@@ -7,20 +7,20 @@ class StudentsController < ApplicationController
 
   def show
     set_student
-      @active = "This student is currently active"
-      @inactive = "This student is currently inactive"
+      @active = "This student is currently active."
+      @inactive = "This student is currently inactive."
   end
   
   def activate
     set_student
-    if @student.active == true 
-      @student.active == false
+    if @student.active == false
+      @student.active = true
       @student.save 
     else  
-      @student.active == true 
+      @student.active = false 
       @student.save 
     end 
-    redirect '/students/:id'
+    redirect_to "/students/#{@student.id}"
   end
 
   private
