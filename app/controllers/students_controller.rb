@@ -11,6 +11,6 @@ class StudentsController < ApplicationController
   private
 
     def set_student
-      @student = Student.find(params[:id])
+      @student = Student.find_by(id: params[:id])
     end
 end
