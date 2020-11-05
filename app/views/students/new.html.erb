@@ -1,0 +1,8 @@
+<%= form_tag('/students') do  %>
+<%= label_tag 'first_name' %>
+<%= text_field_tag 'student[first_name]' %>
+<%= label_tag 'last_name' %>
+<%= text_field_tag 'student[last_name]' %>
+<%= submit_tag 'Make New Student'%>
+
+<% end %>
